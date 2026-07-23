@@ -1,0 +1,218 @@
+aid: investec
+url: https://raw.githubusercontent.com/api-evangelist/investec/refs/heads/main/apis.yml
+name: Investec
+kind: company
+description: >-
+  Investec is an international specialist bank and wealth manager, dual-listed on
+  the London Stock Exchange and Johannesburg Stock Exchange and operating through
+  Investec plc (UK) and Investec Limited (South Africa). In the United Kingdom,
+  Investec Bank plc is authorised by the PRA and regulated by the FCA and PRA and
+  is an FCA-registered Account Servicing Payment Service Provider (ASPSP) under
+  UK Open Banking, exposing Account and Transaction Information (AIS), Payment
+  Initiation (PIS), and Confirmation of Funds (CBPII) interfaces built to the
+  Open Banking Implementation Entity (OBIE) Read/Write API Standard (v3.1),
+  secured with FAPI-grade OAuth2/OIDC, PSD2 strong customer authentication, and
+  mutual-TLS using OBIE/eIDAS certificates. Investec is a specialist private bank
+  and wealth manager rather than a mass-market retail bank, so it is not one of
+  the CMA9 and does not operate a branch or ATM network. Alongside Open Banking,
+  Investec runs a first-party Programmable Banking / Open API developer platform
+  at openapi.investec.com offering Private Bank, Business & Commercial Banking,
+  Intermediaries, Intermediaries Forex, and Card APIs secured with OAuth2 client
+  credentials, published through the Investec Developer Portal at
+  developer.investec.com.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+- Payments
+- Account Information
+- Specialist Bank
+- Wealth Management
+- FAPI
+- Programmable Banking
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: investec:investec-private-bank-api
+  name: Investec Private Bank API
+  description: >-
+    First-party Programmable Banking API to retrieve data and perform actions on
+    your own or your business's Investec Private Banking account, including
+    accounts, balances, transactions, transfers, and payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Private Banking
+  - Accounts
+  - Payments
+  properties:
+  - type: Documentation
+    url: https://developer.investec.com/api-reference
+  - type: APIReference
+    url: https://developer.investec.com/api-reference
+  - type: Authentication
+    url: https://developer.investec.com/api-reference
+- aid: investec:investec-business-commercial-banking-api
+  name: Investec Business & Commercial Banking API
+  description: >-
+    First-party Programmable Banking API to retrieve data and perform actions on
+    Investec business and commercial banking accounts.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Business Banking
+  - Accounts
+  properties:
+  - type: Documentation
+    url: https://developer.investec.com/api-reference
+  - type: APIReference
+    url: https://developer.investec.com/api-reference
+- aid: investec:investec-intermediaries-api
+  name: Investec Intermediaries API
+  description: >-
+    First-party Programmable Banking API to retrieve data and perform actions on
+    behalf of your clients, including forex quoting and trading.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Intermediaries
+  - Forex
+  properties:
+  - type: Documentation
+    url: https://developer.investec.com/api-reference
+  - type: APIReference
+    url: https://developer.investec.com/api-reference
+- aid: investec:investec-intermediaries-forex-api
+  name: Investec Intermediaries Forex API
+  description: >-
+    First-party Programmable Banking API for Balance of Payments (BOP) reporting
+    and foreign-exchange information retrieval on behalf of your clients.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Forex
+  - Reporting
+  properties:
+  - type: Documentation
+    url: https://developer.investec.com/api-reference
+  - type: APIReference
+    url: https://developer.investec.com/api-reference
+- aid: investec:investec-card-api
+  name: Investec Card API
+  description: >-
+    First-party Programmable Banking Card API to retrieve card data and
+    programmatically attach rules that run before and after transactions on
+    Investec programmable cards.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Cards
+  - Programmable Cards
+  properties:
+  - type: Documentation
+    url: https://developer.investec.com/api-reference
+  - type: APIReference
+    url: https://developer.investec.com/api-reference
+- aid: investec:investec-authorisation-api
+  name: Investec Authorisation API (OAuth)
+  description: >-
+    First-party OAuth2 authorisation endpoint that generates and refreshes the
+    access tokens authorising calls to the Investec Programmable Banking APIs.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com/identity/v2/oauth2/token
+  tags:
+  - OAuth
+  - Authentication
+  properties:
+  - type: Documentation
+    url: https://developer.investec.com/api-reference
+  - type: APIReference
+    url: https://developer.investec.com/api-reference
+- aid: investec:investec-account-transaction-information-api
+  name: Investec Account and Transaction Information API (AIS)
+  description: >-
+    UK Open Banking Account Information Service (AISP) interface for accessing
+    account, balance, transaction, and product data. Investec Bank plc conforms
+    to the OBIE Read/Write API Standard (v3.1); the harvested OpenAPI is the
+    shared OBIE standard specification, not an Investec-proprietary contract, and
+    is FAPI-secured (OAuth2/OIDC + mTLS + PSD2 SCA).
+  humanURL: https://developer.investec.com/api-products
+  baseURL: /open-banking/v3.1/aisp
+  tags:
+  - Open Banking
+  - Account Information
+  - AISP
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-account-info-openapi.yaml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-payment-initiation-api
+  name: Investec Payment Initiation API (PIS)
+  description: >-
+    UK Open Banking Payment Initiation Service (PISP) interface for initiating
+    domestic and other payments. Investec Bank plc conforms to the OBIE
+    Read/Write API Standard (v3.1); the harvested OpenAPI is the shared OBIE
+    standard specification, not an Investec-proprietary contract, and is
+    FAPI-secured (OAuth2/OIDC + mTLS + PSD2 SCA).
+  humanURL: https://developer.investec.com/api-products
+  baseURL: /open-banking/v3.1/pisp
+  tags:
+  - Open Banking
+  - Payments
+  - PISP
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-payment-initiation-openapi.yaml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-confirmation-of-funds-api
+  name: Investec Confirmation of Funds API (CBPII)
+  description: >-
+    UK Open Banking Confirmation of Funds (CBPII) interface for checking whether
+    funds are available on an account. Investec Bank plc conforms to the OBIE
+    Read/Write API Standard (v3.1); the harvested OpenAPI is the shared OBIE
+    standard specification, not an Investec-proprietary contract, and is
+    FAPI-secured (OAuth2/OIDC + mTLS + PSD2 SCA).
+  humanURL: https://developer.investec.com/api-products
+  baseURL: /open-banking/v3.1/cbpii
+  tags:
+  - Open Banking
+  - Confirmation of Funds
+  - CBPII
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-confirmation-funds-openapi.yaml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+common:
+- type: Website
+  url: https://www.investec.com/
+- type: DeveloperPortal
+  url: https://developer.investec.com/
+- type: Documentation
+  url: https://developer.investec.com/api-reference
+- type: APIReference
+  url: https://developer.investec.com/api-products
+- type: Blog
+  url: https://investec.gitbook.io/programmable-banking-community-wiki
+- type: GitHubOrganization
+  url: https://github.com/investec
+- type: LinkedIn
+  url: https://www.linkedin.com/company/investec
+- type: Support
+  url: https://developer.investec.com/support
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

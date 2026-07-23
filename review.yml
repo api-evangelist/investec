@@ -1,0 +1,126 @@
+aid: investec
+name: Investec
+review:
+  question: >-
+    Does Investec expose a documented, verifiable public API surface as a UK
+    Open Banking ASPSP, and what is its authentication model and OpenAPI
+    provenance?
+  answer: true
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Investec Bank plc is an FCA/PRA-authorised UK specialist bank and, per the
+    Open Banking Directory, an FCA-registered Account Servicing Payment Service
+    Provider (ASPSP). Its UK Open Banking interface is built to the OBIE
+    Read/Write API Standard v3.1 and covers AISP and PISP roles plus
+    Confirmation of Funds (CBPII). These Read/Write surfaces are FAPI-secured:
+    OAuth2/OIDC authorization-code flow, PSD2 strong customer authentication,
+    mutual-TLS client authentication, and OBIE/eIDAS certificate-based dynamic
+    client registration, onboarded through the Open Banking Directory and a bank
+    sandbox rather than open self-serve keys. As a specialist private bank and
+    wealth manager Investec is NOT one of the CMA9, operates no retail branch or
+    ATM network, and consequently does not publish the OBIE Open Data (ATMs /
+    Branches / product) reference APIs; no live Open Data endpoint was confirmed.
+    Separately, Investec runs a genuinely live first-party Programmable Banking /
+    Open API platform at https://openapi.investec.com (developer portal at
+    https://developer.investec.com) exposing Private Bank, Business & Commercial
+    Banking, Intermediaries, Intermediaries Forex, and Card APIs plus an OAuth2
+    Authorisation API. Both the token endpoint and a data endpoint returned HTTP
+    401 to unauthenticated probes, confirming a live, auth-gated production host.
+  specProvenance: |
+    No Investec-proprietary OpenAPI for the Open Banking Read/Write surface was
+    publicly downloadable. The three harvested specs under openapi/ are the
+    SHARED OBIE Read/Write API Standard (version 4.0.1, OpenAPI 3.0.0) taken
+    verbatim from github.com/OpenBankingUK/read-write-api-specs — Account and
+    Transaction Information, Payment Initiation, and Confirmation of Funds. They
+    represent the standard Investec conforms to (documented as built on v3.1),
+    NOT an Investec service contract. The first-party Programmable Banking APIs
+    are documented on the developer portal reference pages; no machine-readable
+    OpenAPI was published there to harvest.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://openapi.investec.com
+      documented: true
+      note: >-
+        First-party Programmable Banking / Open API production host. Token
+        endpoint POST /identity/v2/oauth2/token and data endpoints return HTTP
+        401 when unauthenticated (live, OAuth2-gated).
+    - protocol: REST
+      scheme: https
+      baseURL: https://openapisandbox.investec.com
+      documented: true
+      note: Programmable Banking sandbox host (responds; used for testing before production).
+    - protocol: REST
+      scheme: https
+      baseURL: /open-banking/v3.1/{aisp|pisp|cbpii}
+      documented: true
+      note: >-
+        UK Open Banking Read/Write standard path shape. The Investec-specific
+        production host is issued to Third-Party Providers at OBIE onboarding and
+        was not publicly confirmable; no host was fabricated.
+  authModel:
+    firstParty: OAuth2 client-credentials (Bearer access tokens via /identity/v2/oauth2/token)
+    openBanking:
+      - FAPI-grade OAuth2 / OIDC authorization-code flow
+      - PSD2 strong customer authentication (SCA)
+      - Mutual-TLS (mTLS) client authentication
+      - Dynamic Client Registration with OBIE / eIDAS certificates
+  openDataConfirmed: false
+  openDataNote: >-
+    No OBIE Open Data (ATMs/Branches/Products) endpoint was located or returned a
+    live 200. Consistent with Investec being a specialist bank with no branch or
+    ATM network and outside the CMA9 Open Data mandate.
+  endpointsProbed:
+    - status: 401
+      method: POST
+      url: https://openapi.investec.com/identity/v2/oauth2/token
+    - status: 401
+      method: GET
+      url: https://openapi.investec.com/za/pb/v1/accounts
+    - status: 400
+      method: GET
+      url: https://openapisandbox.investec.com/identity/v2/oauth2/token
+    - status: 200
+      method: GET
+      url: https://developer.investec.com/
+    - status: 200
+      method: GET
+      url: https://developer.investec.com/api-reference
+sources:
+  - url: https://developer.investec.com/
+    type: DeveloperPortal
+    note: Investec Developer Portal home; Programmable Banking product surface (HTTP 200).
+  - url: https://developer.investec.com/api-reference
+    type: APIReference
+    note: >-
+      Lists Private Bank, Business & Commercial Banking, Intermediaries,
+      Intermediaries Forex, Card, and Authorisation (OAuth) APIs (HTTP 200).
+  - url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+    type: APIReference
+    note: >-
+      Open Banking directory entry; confirms Investec Bank plc as an ASPSP built
+      on v3.1 of the Open Banking specifications.
+  - url: https://www.investec.com/en_gb/welcome-to-investec/digital/open-banking.html
+    type: Documentation
+    note: >-
+      Investec UK Open Banking page describing AIS, PIS, Confirmation of Funds,
+      and Auth/Client Registration services and a developer sandbox.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: OpenAPI
+    note: >-
+      Source of the harvested shared OBIE Read/Write standard specs (AIS, PIS,
+      CBPII), version 4.0.1, OpenAPI 3.0.0.
+actions:
+  openapiHarvested: true
+  openapiFiles:
+    - openapi/obie-account-info-openapi.yaml
+    - openapi/obie-payment-initiation-openapi.yaml
+    - openapi/obie-confirmation-funds-openapi.yaml
+  apisYmlUpdated: true
+  reason: >-
+    Captured Investec's real, live first-party Programmable Banking API surface
+    (openapi.investec.com, verified 401 auth-gated) and represented its UK Open
+    Banking Read/Write family (AIS/PIS/CBPII) against the shared OBIE standard,
+    clearly labelled as standard-provenance rather than an Investec contract.
