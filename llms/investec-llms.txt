@@ -1,0 +1,67 @@
+# Investec Developer Community Wiki
+
+## Programmable Banking Community Wiki
+
+- [Investec Developer community wiki](https://investec.gitbook.io/programmable-banking-community-wiki/home/readme.md)
+- [Get started overview](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/get-started-overview.md)
+- [Self-enrollment guide](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/self-enrollment-guide.md)
+- [API quick start guide](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/api-quick-start-guide.md)
+- [How to create your API keys](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/api-quick-start-guide/how-to-get-your-api-keys.md)
+- [How to authenticate against the Investec API](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/api-quick-start-guide/how-to-authenticate.md)
+- [How to get your account, balance, and transaction data](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/api-quick-start-guide/how-to-get-your-transaction-history.md)
+- [How to make transfers and payments](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/api-quick-start-guide/how-to-make-a-payment.md)
+- [Programmable card quick start guide](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/card-quick-start-guide.md)
+- [How to activate your programmable card](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/card-quick-start-guide/how-to-activate-your-card-for-programmable-banking.md)
+- [How to add low-code snippets to your card on Investec Online](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/card-quick-start-guide/how-to-add-low-code-snippets-to-your-card-on-investec-online.md)
+- [How to add code to your card and run a simulation using the online IDE](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/card-quick-start-guide/how-to-add-code-to-your-card.md)
+- [How to use the programmable card API](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/card-quick-start-guide/how-to-use-the-cards-api.md)
+- [Sample apps](https://investec.gitbook.io/programmable-banking-community-wiki/get-started/sample-apps.md)
+- [Get building overview](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/get-building-overview.md)
+- [Community libraries & tools](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/community-libraries-and-tools.md): Browse selected community libraries and tools available for the Investec API. Fork the repo to kickstart your build!
+- [Build tutorials & guides](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-something-simple.md): A few interesting starter tutorials and guides shared by the community
+- [Card | Slack Integration](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-something-simple/card-or-slack-integration.md)
+- [Card | How to create a DIY petrol card](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-something-simple/card-or-how-to-create-a-diy-petrol-card.md)
+- [API | No-code Budget Expense App](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-something-simple/api-or-no-code-budget-expense-app.md)
+- [Build challenges & hackathons](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events.md)
+- [Card Code Quest: The Live Wire Bounty](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/card-code-quest-the-live-wire-bounty.md): Build in sandbox. Deploy to live card code. Tap the card. Earn the loot
+- [Q2 2026 Bounty Challenge | API Side Hustle](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q2-2026-bounty-challenge-or-api-side-hustle.md): Build something people would actually pay for.
+- [Q4 2025 Bounty Challenge | History Repeats Itself](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q4-2025-bounty-challenge-or-history-repeats-itself.md)
+- [Q3 2025 Bounty Challenge | Smart & Secure Banking](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q3-2025-bounty-challenge-or-smart-and-secure-banking.md)
+- [Q2 2025 Bounty Challenge | Every‑Day Money Hack](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q2-2025-bounty-challenge-or-every-day-money-hack.md)
+- [Q1 2025 Bounty Challenge | Path to Financial Health](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q1-2025-bounty-challenge-or-path-to-financial-health.md)
+- [Q4 2024 Bounty Challenge | Festive API Wrappers](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q4-2024-bounty-challenge-festive-api-wrappers.md): Build, Share, and Win with Investec's Q4 2024 Festive Wrapper Challenge
+- [Q3 2024 Bounty Challenge | Everyday Solutions](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q3-2024-bounty-challenge-every-day-solutions.md): Build, Share, and Win with Investec's Q4 2024 Everyday API Solutions Challenge!
+- [Q2 2024 Bounty Challenge | Card Code Snippets](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q2-2024-bounty-challenge-or-card-code-snippets.md): Code, Contribute, and Win with Investec's Q2 2024 Card Snippet Challenge!
+- [Bounties Playground | banking.make.dev](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/open-bounties-playground-or-banking.make.dev.md)
+- [👩💻 Mindjoy | Kid at Heart Build Challenge](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-mindjoy-or-kid-at-heart-build-challenge.md)
+- [EskomSePush Build Challenge](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-eskomsepush-build-challenge.md)
+- [EskomSePush Build Challenge Submissions](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-eskomsepush-build-challenge/eskomsepush-build-challenge-submissions.md)
+- [2022 Hackathon | low-code/no-code](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q2-2022-hackathon-or-low-code-no-code.md)
+- [2022 Hackathon | low-code/no-code | Submissions](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/q2-2022-hackathon-or-low-code-no-code/2022-hackathon-or-low-code-no-code-or-submissions.md)
+- [Spreadsheet Banking | Bounties](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-spreadsheet-banking-or-bounties.md)
+- [👩💻 Spreadsheet Banking | Basic Functions](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-spreadsheet-banking-or-bounties/spreadsheet-banking-or-basic-functions.md): Working with Spreadsheet Banking in Excel
+- [Q1 2023 Bounty Challenge](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-q1-2023-bounty-challenge.md)
+- [Q2 2023 Bounty Challenge](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/open-q2-2023-bounty-challenge.md)
+- [Checklist for Bounty Hunters 🏆](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/open-q2-2023-bounty-challenge/checklist-for-bounty-hunters.md)
+- [Bounty Challenge #2: Code Snippet Showdown 🚀](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/open-q2-2023-bounty-challenge/bounty-challenge-2-code-snippet-showdown.md)
+- [Q1 2024 Bounty Challenge | The Tutorial Quest](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/build-events/closed-q1-2024-bounty-challenge-or-the-tutorial-quest.md): Forge Your Path, Share Your Craft – Join The Tutorial Quest!
+- [Use cases](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/use-cases.md): Take a look at how businesses are winning with Programmable Banking
+- [OneCart](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/use-cases/onecart.md): Fraud detection and prevention with Programmable Banking
+- [African Alliance](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/use-cases/african-alliance.md): Automating expense allocation and reconciliation with Programmable Banking
+- [OfferZen](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/use-cases/offerzen.md): Managing team spend and creating transparency on company expenses with Programmable Banking
+- [VATIT](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/use-cases/vatit.md): Self-service employee expense categorisation with Programmable Banking
+- [Beneke Gantley Inc.](https://investec.gitbook.io/programmable-banking-community-wiki/get-building/use-cases/beneke-gantley-inc..md): Transaction data automatically fed into LawPracticeZA software with Programmable Banking
+- [Get involved](https://investec.gitbook.io/programmable-banking-community-wiki/community/get-involved.md): Everything you need to know about participating in the Investec Developer Community.
+- [Community champions](https://investec.gitbook.io/programmable-banking-community-wiki/community/community-champions.md)
+- [Community manifesto](https://investec.gitbook.io/programmable-banking-community-wiki/community/community-manifesto.md)
+- [Blog posts](https://investec.gitbook.io/programmable-banking-community-wiki/community/blog-posts.md): Archived Programmable Banking Community blog posts posted on the OfferZen Blog
+- [Community integration pros](https://investec.gitbook.io/programmable-banking-community-wiki/community/community-integration-pros.md)
+- [Slack Workspace Move \[COMPLETED\]](https://investec.gitbook.io/programmable-banking-community-wiki/community/transition-update.md): Big News About Our Programmable Banking Community Slack Workspace!
+- [Quick Slack Guide](https://investec.gitbook.io/programmable-banking-community-wiki/community/transition-update/quick-slack-guide.md): A Slack Workspace Migration Field Guide
+- [The Transition FAQ](https://investec.gitbook.io/programmable-banking-community-wiki/community/transition-update/the-transition-faq.md): Community FAQs for the transition process
+- [Investec Developer's QRious Puzzle Challenge](https://investec.gitbook.io/programmable-banking-community-wiki/community/investec-developers-qrious-puzzle-challenge.md): Dive into the Investec Developer QRious Game—a digital mystery for devs who love to decode and deconstruct.
+- [Investec Developer - Puzzle Challenge](https://investec.gitbook.io/programmable-banking-community-wiki/community/investec-developers-qrious-puzzle-challenge/investec-developer-puzzle-challenge.md)
+- [Models](https://investec.gitbook.io/programmable-banking-community-wiki/community/investec-developers-qrious-puzzle-challenge/models.md)
+- [Puzzle Hunt 2025](https://investec.gitbook.io/programmable-banking-community-wiki/puzzle-hunt-2025.md)
+- [Get support](https://investec.gitbook.io/programmable-banking-community-wiki/feedback-and-support/get-support.md): Community support framework for Programmable Banking API and card accounts.
+- [Community FAQs](https://investec.gitbook.io/programmable-banking-community-wiki/feedback-and-support/community-faqs.md): Common questions asked in the community

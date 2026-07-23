@@ -1,0 +1,36 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/*.yaml + developer.investec.com
+standards:
+- id: oauth2
+  conforms: true
+  evidence: OBIE specs declare oauth2 securitySchemes (TPPOAuth2Security clientCredentials, PSUOAuth2Security
+    authorizationCode); Programmable Banking uses OAuth2 client_credentials.
+- id: openid-connect
+  conforms: true
+  evidence: OBIE Read/Write uses OIDC hybrid flow for PSU authentication (id_token).
+- id: fapi
+  conforms: true
+  evidence: OBIE Read/Write API Standard is FAPI-secured (x-fapi-* headers present in specs).
+- id: psd2
+  conforms: true
+  evidence: Investec Bank plc is an FCA-registered ASPSP exposing AIS/PIS/CBPII under PSD2 SCA.
+- id: obie-read-write-v4.0
+  conforms: true
+  evidence: Harvested OpenAPIs are OBIE Account & Transaction, Payment Initiation, and Confirmation of
+    Funds v4.0.1.
+- id: mutual-tls
+  conforms: true
+  evidence: OBIE mandates mTLS with OBIE/eIDAS certificates for TPP-to-ASPSP calls.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: OBIE uses the OBErrorResponse1 envelope (Code/Id/Message/Errors[]), not application/problem+json.
+- id: idempotency
+  conforms: true
+  evidence: Payment write operations require the x-idempotency-key request header.
+- id: pagination
+  conforms: true
+  evidence: OBIE list responses carry Links (First/Prev/Next/Last) and Meta.TotalPages.
+- id: json-api
+  conforms: false
+  evidence: Uses OBIE resource envelope (Data/Links/Meta), not JSON:API.

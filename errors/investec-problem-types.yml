@@ -1,0 +1,44 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/*.yaml (OBIE response codes)
+format: obie-oberrorresponse1
+envelope:
+  schema: OBErrorResponse1
+  fields:
+  - Code
+  - Id
+  - Message
+  - Errors[] {ErrorCode, Message, Path, Url}
+note: OBIE error envelope; 400/500 bodies carry OBErrorResponse1 with granular OBIE ErrorCode values (e.g.
+  UK.OBIE.Field.Invalid, UK.OBIE.Resource.NotFound, UK.OBIE.Unsupported.*).
+problems:
+- status: 400
+  title: Bad Request
+  remediation: Fix the request per the OBIE ErrorCode(s) in Errors[].
+- status: 401
+  title: Unauthorized
+  remediation: Present a valid OAuth2 access token (and x-api-key for Programmable Banking).
+- status: 403
+  title: Forbidden
+  remediation: Token lacks the required scope / consent status not Authorised.
+- status: 404
+  title: Not Found
+  remediation: Resource id (AccountId/ConsentId/PaymentId) does not exist.
+- status: 405
+  title: Method Not Allowed
+- status: 406
+  title: Not Acceptable
+  remediation: Request a supported media type (application/json).
+- status: 409
+  title: Conflict
+  remediation: Idempotency-key reuse with a different payload, or resource state conflict.
+- status: 415
+  title: Unsupported Media Type
+- status: 422
+  title: Unprocessable Entity
+  remediation: Semantic/business validation failure (see OBIE ErrorCode).
+- status: 429
+  title: Too Many Requests
+  remediation: Back off and retry per rate-limit signalling.
+- status: 500
+  title: Internal Server Error

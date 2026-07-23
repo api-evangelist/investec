@@ -1,0 +1,24 @@
+generated: '2026-07-23'
+method: generated
+skills:
+- file: investec-retrieve-accounts-and-transactions.md
+  name: Retrieve accounts, balances and transactions (AIS)
+  api: openapi/obie-account-info-openapi.yaml
+  operations:
+  - CreateAccountAccessConsents
+  - GetAccounts
+  - GetAccountsAccountIdBalances
+  - GetAccountsAccountIdTransactions
+- file: investec-initiate-domestic-payment.md
+  name: Initiate a domestic payment (PIS)
+  api: openapi/obie-payment-initiation-openapi.yaml
+  operations:
+  - CreateDomesticPaymentConsents
+  - CreateDomesticPayments
+  - GetDomesticPaymentsDomesticPaymentId
+- file: investec-confirm-funds.md
+  name: Confirm funds availability (CBPII)
+  api: openapi/obie-confirmation-funds-openapi.yaml
+  operations:
+  - CreateFundsConfirmationConsents
+  - CreateFundsConfirmations

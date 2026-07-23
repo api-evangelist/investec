@@ -1,0 +1,16 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Investec Confirmation of Funds (CBPII)
+  version: 1.0.0
+extends: openapi/obie-confirmation-funds-openapi.yaml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: investec
+    x-apievangelist-standard: OBIE Read/Write API Standard v4.0
+    x-apievangelist-security: FAPI + mTLS + PSD2 SCA
+- target: $.info
+  update:
+    x-apievangelist-conventions: conventions/investec-conventions.yml
+    x-apievangelist-errors: errors/investec-problem-types.yml
+    x-apievangelist-authentication: authentication/investec-authentication.yml

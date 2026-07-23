@@ -1,0 +1,23 @@
+generated: '2026-07-23'
+method: searched
+source: developer.investec.com + openbanking.org.uk
+versioning:
+  obie:
+    scheme: uri-path
+    current: v4.0
+    docs: https://standards.openbanking.org.uk/
+  programmable_banking:
+    scheme: uri-path
+    current: v2 (identity) / v1 (accounts)
+    docs: https://developer.investec.com/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: OBIE versions are governed centrally by the Open Banking standard; Investec follows OBIE version
+    deprecation. No first-party dated deprecation policy published on the developer portal.
+status_page: null
+sla:
+  url: null
+  note: Availability governed by PSD2/OBIE operational and performance reporting for the ASPSP; no public
+    developer status page.
+deprecated_operations: []

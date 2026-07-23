@@ -1,0 +1,27 @@
+generated: '2026-07-23'
+method: searched
+note: No /.well-known/ discovery documents are published on the Investec API or developer hosts. All probes
+  returned 404; recorded for auditability.
+hosts:
+- host: https://openapi.investec.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /identity/.well-known/openid-configuration
+    status: 404
+  - path: /openapi.json
+    status: 404
+- host: https://developer.investec.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://www.investec.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404

@@ -1,0 +1,16 @@
+generated: '2026-07-23'
+method: searched
+source: developer.investec.com Oauth2-Sandbox + community wiki
+test_vs_live:
+  sandbox_base_url: https://openapisandbox.investec.com
+  production_base_url: https://openapi.investec.com
+  note: Sandbox and production are separate hosts. Sandbox client_id/client_secret/x-api-key work only
+    against openapisandbox.investec.com.
+credentials:
+  model: OAuth2 client_credentials + x-api-key
+  how_to_get: Published shared sandbox credentials (client_id, client_secret, x-api-key) are documented
+    on the developer portal Oauth2-Sandbox section for anonymous testing against mock accounts.
+  note: Shared sandbox credential VALUES are published by Investec but deliberately not inlined here to
+    avoid secret-scanning false positives; see source URL.
+mock_data: Sandbox returns mock accounts, balances, and transactions; programmable-card code can be tested
+  in the online IDE simulator before deploying to a live card.

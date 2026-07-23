@@ -1,0 +1,27 @@
+generated: '2026-07-23'
+method: searched
+source: https://investec.gitbook.io/programmable-banking-community-wiki/get-building/community-libraries-and-tools
+note: Investec publishes no first-party client SDK; the Programmable Banking ecosystem is served by community-maintained
+  libraries. official:false throughout.
+packages:
+- language: python
+  registry: pypi
+  name: investec-za-pb
+  url: https://pypi.org/project/investec-za-pb/
+  install: pip install investec-za-pb
+  official: false
+  note: Community type-safe Python SDK for Investec Programmable Banking
+- language: elixir
+  registry: hex
+  name: investec_open_api
+  url: https://hex.pm/packages/investec_open_api
+  install: 'mix deps.get # {:investec_open_api, "~> 0.1"}'
+  official: false
+  note: Community Elixir client (hexdocs.pm/investec_open_api)
+- language: javascript
+  registry: npm
+  name: investec-api
+  url: https://www.npmjs.com/search?q=investec
+  install: npm install investec-api
+  official: false
+  note: Community NPM wrapper(s) for the Investec Open API

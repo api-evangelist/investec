@@ -1,0 +1,62 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-account-info-openapi.yaml + obie-payment-initiation-openapi.yaml
+entities:
+- Account
+- Balance
+- Transaction
+- Beneficiary
+- DirectDebit
+- StandingOrder
+- ScheduledPayment
+- Statement
+- Party
+- Product
+- AccountAccessConsent
+- DomesticPaymentConsent
+- DomesticPayment
+relationships:
+- from: Account
+  type: has_many
+  to: Balance
+  via: AccountId
+- from: Account
+  type: has_many
+  to: Transaction
+  via: AccountId
+- from: Account
+  type: has_many
+  to: Beneficiary
+  via: AccountId
+- from: Account
+  type: has_many
+  to: DirectDebit
+  via: AccountId
+- from: Account
+  type: has_many
+  to: StandingOrder
+  via: AccountId
+- from: Account
+  type: has_many
+  to: ScheduledPayment
+  via: AccountId
+- from: Account
+  type: has_many
+  to: Statement
+  via: AccountId
+- from: Account
+  type: belongs_to
+  to: Party
+  via: AccountId/Party
+- from: Account
+  type: has_one
+  to: Product
+  via: AccountId
+- from: AccountAccessConsent
+  type: has_many
+  to: Account
+  via: ConsentId (permissions grant)
+- from: DomesticPayment
+  type: belongs_to
+  to: DomesticPaymentConsent
+  via: ConsentId

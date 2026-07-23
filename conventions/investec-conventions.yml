@@ -1,0 +1,40 @@
+generated: '2026-07-23'
+method: searched
+source: openapi/*.yaml + developer.investec.com
+authentication:
+  programmable_banking: OAuth2 client_credentials with HTTP Basic (client_id:client_secret) + x-api-key
+    header; token endpoint POST /identity/v2/oauth2/token; access token TTL ~30 min.
+  open_banking: FAPI OAuth2/OIDC (client_credentials for TPP, authorization_code+SCA for PSU) over mutual-TLS
+    with OBIE/eIDAS certificates.
+idempotency:
+  supported: true
+  header: x-idempotency-key
+  scope: Payment/consent write operations (PIS, CBPII)
+  max_length: 40
+  note: OBIE mandates x-idempotency-key on payment-order creation; replaying the same key with an identical
+    payload must not create a duplicate.
+pagination:
+  style: page
+  request_params:
+  - page
+  response_fields:
+  - Links.First
+  - Links.Prev
+  - Links.Next
+  - Links.Last
+  - Meta.TotalPages
+  note: OBIE list endpoints (transactions, statements) paginate via Links + Meta.
+request_tracing:
+  headers:
+  - x-fapi-interaction-id
+  - x-fapi-auth-date
+  - x-fapi-customer-ip-address
+versioning:
+  style: uri-path
+  current: OBIE v4.0
+error_envelope: "OBErrorResponse1 (Code/Id/Message/Errors[]) \u2014 see errors/investec-problem-types.yml"
+cross_links:
+  errors: errors/investec-problem-types.yml
+  authentication: authentication/investec-authentication.yml
+  scopes: scopes/investec-scopes.yml
+  lifecycle: lifecycle/investec-lifecycle.yml
