@@ -16,6 +16,19 @@ description: Investec is an international specialist bank and wealth manager, du
   APIs secured with OAuth2 client credentials, published through the Investec Developer Portal at developer.investec.com.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
+- Financial-Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+- Payments
+- Account Information
+- Specialist Bank
+- Wealth Management
+- FAPI
+- Programmable Banking
+tags_raw:
 - Financial Services
 - Banking
 - Open Banking
@@ -41,6 +54,10 @@ apis:
   baseURL: https://openapi.investec.com
   tags:
   - Private Banking
+  - Account
+  - Payments
+  tags_raw:
+  - Private Banking
   - Accounts
   - Payments
   properties:
@@ -57,6 +74,9 @@ apis:
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
+  - Business Banking
+  - Account
+  tags_raw:
   - Business Banking
   - Accounts
   properties:
@@ -113,6 +133,8 @@ apis:
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com/identity/v2/oauth2/token
   tags:
+  - Authentication
+  tags_raw:
   - OAuth
   - Authentication
   properties:
