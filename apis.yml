@@ -47,9 +47,9 @@ specificationVersion: '0.23'
 apis:
 - aid: investec:investec-private-bank-api
   name: Investec Private Bank API
-  description: First-party Programmable Banking API to retrieve data and perform actions on your own or
-    your business's Investec Private Banking account, including accounts, balances, transactions, transfers,
-    and payments.
+  description: >-
+    First-party Programmable Banking API to retrieve data and perform actions on your own or your business's
+    Investec Private Banking account, including accounts, balances, transactions, transfers, and payments.
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
@@ -69,8 +69,9 @@ apis:
     url: https://developer.investec.com/api-reference
 - aid: investec:investec-business-commercial-banking-api
   name: Investec Business & Commercial Banking API
-  description: First-party Programmable Banking API to retrieve data and perform actions on Investec business
-    and commercial banking accounts.
+  description: >-
+    First-party Programmable Banking API to retrieve data and perform actions on Investec business and
+    commercial banking accounts.
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
@@ -86,8 +87,9 @@ apis:
     url: https://developer.investec.com/api-reference
 - aid: investec:investec-intermediaries-api
   name: Investec Intermediaries API
-  description: First-party Programmable Banking API to retrieve data and perform actions on behalf of
-    your clients, including forex quoting and trading.
+  description: >-
+    First-party Programmable Banking API to retrieve data and perform actions on behalf of your clients,
+    including forex quoting and trading.
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
@@ -100,7 +102,8 @@ apis:
     url: https://developer.investec.com/api-reference
 - aid: investec:investec-intermediaries-forex-api
   name: Investec Intermediaries Forex API
-  description: First-party Programmable Banking API for Balance of Payments (BOP) reporting and foreign-exchange
+  description: >-
+    First-party Programmable Banking API for Balance of Payments (BOP) reporting and foreign-exchange
     information retrieval on behalf of your clients.
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
@@ -114,8 +117,9 @@ apis:
     url: https://developer.investec.com/api-reference
 - aid: investec:investec-card-api
   name: Investec Card API
-  description: First-party Programmable Banking Card API to retrieve card data and programmatically attach
-    rules that run before and after transactions on Investec programmable cards.
+  description: >-
+    First-party Programmable Banking Card API to retrieve card data and programmatically attach rules
+    that run before and after transactions on Investec programmable cards.
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
@@ -128,8 +132,9 @@ apis:
     url: https://developer.investec.com/api-reference
 - aid: investec:investec-authorisation-api
   name: Investec Authorisation API (OAuth)
-  description: First-party OAuth2 authorisation endpoint that generates and refreshes the access tokens
-    authorising calls to the Investec Programmable Banking APIs.
+  description: >-
+    First-party OAuth2 authorisation endpoint that generates and refreshes the access tokens authorising
+    calls to the Investec Programmable Banking APIs.
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com/identity/v2/oauth2/token
   tags:
@@ -142,59 +147,412 @@ apis:
     url: https://developer.investec.com/api-reference
   - type: APIReference
     url: https://developer.investec.com/api-reference
-- aid: investec:investec-account-transaction-information-api
-  name: Investec Account and Transaction Information API (AIS)
-  description: UK Open Banking Account Information Service (AISP) interface for accessing account, balance,
-    transaction, and product data. Investec Bank plc conforms to the OBIE Read/Write API Standard (v3.1);
-    the harvested OpenAPI is the shared OBIE standard specification, not an Investec-proprietary contract,
-    and is FAPI-secured (OAuth2/OIDC + mTLS + PSD2 SCA).
-  humanURL: https://developer.investec.com/api-products
-  baseURL: /open-banking/v3.1/aisp
+- aid: investec:investec-account-access-consents-api
+  name: Investec Account Access Consents API
+  description: >-
+    The Account Access Consents API from Investec — 2 operation(s) for account access consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
   tags:
-  - Open Banking
-  - Account Information
-  - AISP
+  - Account Access Consents
   properties:
   - type: OpenAPI
-    url: openapi/obie-account-info-openapi.yaml
+    url: openapi/investec-account-access-consents-api-openapi.yml
   - type: Documentation
     url: https://developer.investec.com/api-products
   - type: APIReference
     url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
-- aid: investec:investec-payment-initiation-api
-  name: Investec Payment Initiation API (PIS)
-  description: UK Open Banking Payment Initiation Service (PISP) interface for initiating domestic and
-    other payments. Investec Bank plc conforms to the OBIE Read/Write API Standard (v3.1); the harvested
-    OpenAPI is the shared OBIE standard specification, not an Investec-proprietary contract, and is FAPI-secured
-    (OAuth2/OIDC + mTLS + PSD2 SCA).
-  humanURL: https://developer.investec.com/api-products
-  baseURL: /open-banking/v3.1/pisp
+- aid: investec:investec-accounts-api
+  name: Investec Accounts API
+  description: The Accounts API from Investec — 2 operation(s) for accounts.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
   tags:
-  - Open Banking
-  - Payments
-  - PISP
+  - Accounts
   properties:
   - type: OpenAPI
-    url: openapi/obie-payment-initiation-openapi.yaml
+    url: openapi/investec-accounts-api-openapi.yml
   - type: Documentation
     url: https://developer.investec.com/api-products
   - type: APIReference
     url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
-- aid: investec:investec-confirmation-of-funds-api
-  name: Investec Confirmation of Funds API (CBPII)
-  description: UK Open Banking Confirmation of Funds (CBPII) interface for checking whether funds are
-    available on an account. Investec Bank plc conforms to the OBIE Read/Write API Standard (v3.1); the
-    harvested OpenAPI is the shared OBIE standard specification, not an Investec-proprietary contract,
-    and is FAPI-secured (OAuth2/OIDC + mTLS + PSD2 SCA).
-  humanURL: https://developer.investec.com/api-products
-  baseURL: /open-banking/v3.1/cbpii
+- aid: investec:investec-balances-api
+  name: Investec Balances API
+  description: The Balances API from Investec — 2 operation(s) for balances.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
   tags:
-  - Open Banking
-  - Confirmation of Funds
-  - CBPII
+  - Balances
   properties:
   - type: OpenAPI
-    url: openapi/obie-confirmation-funds-openapi.yaml
+    url: openapi/investec-balances-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-beneficiaries-api
+  name: Investec Beneficiaries API
+  description: The Beneficiaries API from Investec — 2 operation(s) for beneficiaries.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Beneficiaries
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-beneficiaries-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-direct-debits-api
+  name: Investec Direct Debits API
+  description: The Direct Debits API from Investec — 2 operation(s) for direct debits.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Direct Debits
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-direct-debits-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-domestic-payment-consents-api
+  name: Investec Domestic Payment Consents API
+  description: >-
+    The Domestic Payment Consents API from Investec — 3 operation(s) for domestic payment consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Domestic Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-domestic-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-domestic-payments-api
+  name: Investec Domestic Payments API
+  description: The Domestic Payments API from Investec — 3 operation(s) for domestic payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Domestic Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-domestic-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-domestic-scheduled-payment-consents-api
+  name: Investec Domestic Scheduled Payment Consents API
+  description: >-
+    The Domestic Scheduled Payment Consents API from Investec — 2 operation(s) for domestic scheduled
+    payment consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Domestic Scheduled Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-domestic-scheduled-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-domestic-scheduled-payments-api
+  name: Investec Domestic Scheduled Payments API
+  description: >-
+    The Domestic Scheduled Payments API from Investec — 3 operation(s) for domestic scheduled payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Domestic Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-domestic-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-domestic-standing-order-consents-api
+  name: Investec Domestic Standing Order Consents API
+  description: >-
+    The Domestic Standing Order Consents API from Investec — 2 operation(s) for domestic standing order
+    consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Domestic Standing Order Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-domestic-standing-order-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-domestic-standing-orders-api
+  name: Investec Domestic Standing Orders API
+  description: >-
+    The Domestic Standing Orders API from Investec — 3 operation(s) for domestic standing orders.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Domestic Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-domestic-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-file-payment-consents-api
+  name: Investec File Payment Consents API
+  description: The File Payment Consents API from Investec — 3 operation(s) for file payment consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - File Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-file-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-file-payments-api
+  name: Investec File Payments API
+  description: The File Payments API from Investec — 4 operation(s) for file payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - File Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-file-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-funds-confirmation-consents-api
+  name: Investec Funds Confirmation Consents API
+  description: >-
+    The Funds Confirmation Consents API from Investec — 2 operation(s) for funds confirmation consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Funds Confirmation Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-funds-confirmation-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-funds-confirmations-api
+  name: Investec Funds Confirmations API
+  description: The Funds Confirmations API from Investec — 1 operation(s) for funds confirmations.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Funds Confirmations
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-funds-confirmations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-international-payment-consents-api
+  name: Investec International Payment Consents API
+  description: >-
+    The International Payment Consents API from Investec — 3 operation(s) for international payment consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - International Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-international-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-international-payments-api
+  name: Investec International Payments API
+  description: >-
+    The International Payments API from Investec — 3 operation(s) for international payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - International Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-international-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-international-scheduled-payments-api
+  name: Investec International Scheduled Payments API
+  description: >-
+    The International Scheduled Payments API from Investec — 3 operation(s) for international scheduled
+    payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - International Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-international-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-international-scheduled-payments-consents-api
+  name: Investec International Scheduled Payments Consents API
+  description: >-
+    The International Scheduled Payments Consents API from Investec — 3 operation(s) for international
+    scheduled payments consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - International Scheduled Payments Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-international-scheduled-payments-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-international-standing-orders-api
+  name: Investec International Standing Orders API
+  description: >-
+    The International Standing Orders API from Investec — 3 operation(s) for international standing orders.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - International Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-international-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-international-standing-orders-consents-api
+  name: Investec International Standing Orders Consents API
+  description: >-
+    The International Standing Orders Consents API from Investec — 2 operation(s) for international standing
+    orders consents.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - International Standing Orders Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-international-standing-orders-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-offers-api
+  name: Investec Offers API
+  description: The Offers API from Investec — 2 operation(s) for offers.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Offers
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-offers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-parties-api
+  name: Investec Parties API
+  description: The Parties API from Investec — 3 operation(s) for parties.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Parties
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-parties-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-products-api
+  name: Investec Products API
+  description: The Products API from Investec — 2 operation(s) for products.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-products-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-scheduled-payments-api
+  name: Investec Scheduled Payments API
+  description: The Scheduled Payments API from Investec — 2 operation(s) for scheduled payments.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-standing-orders-api
+  name: Investec Standing Orders API
+  description: The Standing Orders API from Investec — 2 operation(s) for standing orders.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-statements-api
+  name: Investec Statements API
+  description: The Statements API from Investec — 5 operation(s) for statements.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Statements
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-statements-api-openapi.yml
+  - type: Documentation
+    url: https://developer.investec.com/api-products
+  - type: APIReference
+    url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+- aid: investec:investec-transactions-api
+  name: Investec Transactions API
+  description: The Transactions API from Investec — 2 operation(s) for transactions.
+  humanURL: https://developer.investec.com/api-reference
+  baseURL: https://openapi.investec.com
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/investec-transactions-api-openapi.yml
   - type: Documentation
     url: https://developer.investec.com/api-products
   - type: APIReference
