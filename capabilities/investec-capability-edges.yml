@@ -1,0 +1,171 @@
+slug: investec
+provider: Investec
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 16
+edges:
+- tag: Domestic Scheduled Payments
+  spec_file: investec-domestic-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.92
+  evidence: POST /domestic-scheduled-payments — "Initiate a Domestic Scheduled Payment"
+  reason: 'UK Open Banking Payment Initiation API surface: capture and retrieval of domestic scheduled
+    payment instructions by an ASPSP. That is payment instruction capture/authorisation, i.e. Payment
+    Initiation Management.'
+- tag: International Payments
+  spec_file: investec-international-payments-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.92
+  evidence: POST /international-payments — "Initiate an International Payment"
+  reason: Initiation and retrieval of international (cross-border) payment instructions by the ASPSP,
+    with OBWriteInternationalResponse5 payload — cross-border payment management.
+- tag: Domestic Standing Orders
+  spec_file: investec-domestic-standing-orders-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.9
+  evidence: POST /domestic-standing-orders — "Submit a Domestic Standing Order"
+  reason: Submission and retrieval of domestic standing order payment instructions (schema OBWriteDomesticStandingOrder3)
+    is domestic payment instruction initiation.
+- tag: International Scheduled Payments
+  spec_file: investec-international-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.9
+  evidence: POST /international-scheduled-payments — "Initiate an International Scheduled Payment"
+  reason: Cross-border payment instruction initiation with future execution date under Open Banking payment
+    initiation.
+- tag: International Standing Orders
+  spec_file: investec-international-standing-orders-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.9
+  evidence: POST /international-standing-orders — "Submit an International Standing Order"
+  reason: Recurring cross-border payment instruction submission and detail retrieval under the bank's
+    Payment Initiation API.
+- tag: Domestic Standing Order Consents
+  spec_file: investec-domestic-standing-order-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.88
+  evidence: POST /domestic-standing-order-consents — "Create a Domestic Standing Order Consent"
+  reason: Consent creation is the authorisation step of a domestic standing order payment instruction
+    under Open Banking PISP flows, squarely payment initiation (instruction capture, validation, authorisation).
+- tag: International Payment Consents
+  spec_file: investec-international-payment-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.88
+  evidence: POST /international-payment-consents — "Create an International Payment Consent"; "Confirm
+    Funds Availability for an International Payment"
+  reason: Consent/authorisation for cross-border payment instructions under Open Banking payment initiation
+    — Cross-Border Payment Management.
+- tag: International Scheduled Payments Consents
+  spec_file: investec-international-scheduled-payments-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.87
+  evidence: POST /international-scheduled-payment-consents — "Create an International Scheduled Payment
+    Consent"
+  reason: Authorisation/consent step for cross-border scheduled payment instructions, including funds-availability
+    confirmation — cross-border payment management.
+- tag: Domestic Payment Consents
+  spec_file: investec-domestic-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: '"POST /domestic-payment-consents  CreateDomesticPaymentConsents  Create a Domestic Payment
+    Consent", "Confirm availability of funds for a Domestic Payment"'
+  reason: Open Banking PISP consent creation with funds-availability confirmation at an ASPSP — capture,
+    validation and authorisation of a payment instruction.
+- tag: Domestic Payments
+  spec_file: investec-domestic-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: '"POST /domestic-payments  CreateDomesticPayments  Initiate a Domestic Payment"; schema "OBWriteDomesticResponse5",
+    "ExternalPaymentTransactionStatus3Code"'
+  reason: Initiation and status retrieval of domestic bank payments under the Payment Initiation specification
+    — payment instruction submission and tracking.
+- tag: File Payment Consents
+  spec_file: investec-file-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /file-payment-consents — "Create a File Payment Consent"; POST /file-payment-consents/{ConsentId}/file
+    — "Upload a File for a ConsentId"
+  reason: Bulk/batch payment file consent and authorisation under Open Banking payment initiation; the
+    file upload is the mechanism for capturing payment instructions, not generic file handling.
+- tag: File Payments
+  spec_file: investec-file-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /file-payments — "Submit a File Payment"
+  reason: Submission and status/report retrieval of bulk file payment instructions — payment instruction
+    capture and execution tracking.
+- tag: International Standing Orders Consents
+  spec_file: investec-international-standing-orders-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.82
+  evidence: POST /international-standing-order-consents — "Create an International Standing Order Consent";
+    openapi title "Payment Initiation ... Consents API"
+  reason: 'Open Banking payment-initiation surface: capturing and authorising a customer consent for an
+    international standing order payment instruction. That is payment instruction capture/authorisation
+    (BC-1340.10); the cross-border sub-capability is an alternative reading, hence not 0.95.'
+- tag: Domestic Scheduled Payment Consents
+  spec_file: investec-domestic-scheduled-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.8
+  evidence: '"POST /domestic-scheduled-payment-consents  CreateDomesticScheduledPaymentConsents  Create
+    a Domestic Scheduled Payment Consent"; schema "OBWriteDomesticScheduledConsentResponse5"'
+  reason: Consent capture and authorisation for future-dated domestic payment instructions at an ASPSP,
+    i.e. payment initiation management.
+- tag: Parties
+  spec_file: investec-parties-api-openapi.yml
+  capability_id: BC-1300.40
+  capability_id_l1: BC-1300
+  capability_name: Customer Information Management
+  confidence: 0.8
+  evidence: GET /accounts/{AccountId}/parties  "Get Parties for an AccountId"; schemas FullLegalName,
+    OBPartyRelationships1, OBInternalPartyType1Code
+  reason: Returns the customer/party record associated with an account — legal name, party type, relationships,
+    contact details. This is banking customer information management, not KYC screening (no due-diligence
+    operations present).
+- tag: Products
+  spec_file: investec-products-api-openapi.yml
+  capability_id: BC-1310.10
+  capability_id_l1: BC-1310
+  capability_name: Product Catalogue Management
+  confidence: 0.78
+  evidence: GET /products  "Get Products"; schemas OBPCAData1, OB_FeeFrequency1Code_4, OB_InterestRateType1Code_0
+  reason: Exposes the bank's product master/reference data (personal current account data, fee frequencies,
+    interest rate types) for accounts, i.e. banking product catalogue. Parameter/pricing detail is present
+    too, so some ambiguity between the .10 and .20 sub-capabilities.

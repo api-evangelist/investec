@@ -570,6 +570,9 @@ apis:
   - type: APIReference
     url: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
 common:
+- type: CapabilityMap
+  url: capabilities/investec-capability-edges.yml
+  name: Investec Business Capability Map
 - type: AgenticAccess
   url: agentic-access/investec-agentic-access.yml
 - type: DomainSecurity
