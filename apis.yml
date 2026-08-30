@@ -180,6 +180,8 @@ apis:
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -505,6 +507,8 @@ apis:
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -561,6 +565,8 @@ apis:
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
