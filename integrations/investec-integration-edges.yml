@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/investec/integrations
 - https://n8n.io/integrations/investec/
@@ -9,8 +9,26 @@ checked:
 - https://composio.dev/toolkits/investec
 - https://monid.ai/tools/investec
 - https://n8n.io/integrations/investec/
+- https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
 - https://zapier.com/apps/investec/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: UK Open Banking
+  partner: null
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
+  contract_reference:
+    register: UK Open Banking regulated providers (OBL directory)
+    spec_file: null
+    role: Account Providers
+    registered_name: Investec Bank PLC
+    register_id: https://register.fca.org.uk/ShPo_FirmDetailsPage?id=001b000000MfGxWAAV
+    matched_domain: investec.com
+    api_families: null
+    detected_by: sweep-standard-registers.py
+    detected: '2026-10-12'
 templates: []
