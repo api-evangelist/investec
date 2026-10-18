@@ -122,6 +122,9 @@ apis:
   baseURL: https://openapi.investec.com
   tags:
   - Intermediaries
+  - Foreign Exchange
+  tags_raw:
+  - Intermediaries
   - Forex
   properties:
   - type: Documentation
@@ -136,6 +139,9 @@ apis:
   humanURL: https://developer.investec.com/api-reference
   baseURL: https://openapi.investec.com
   tags:
+  - Foreign Exchange
+  - Reporting
+  tags_raw:
   - Forex
   - Reporting
   properties:
