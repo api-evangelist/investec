@@ -10,6 +10,7 @@ checked:
 - https://monid.ai/tools/investec
 - https://n8n.io/integrations/investec/
 - https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_17_2026.xml.gz
+- https://reports.adviserinfo.sec.gov/reports/CompilationReports/IA_FIRM_SEC_Feed_10_19_2026.xml.gz
 - https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
 - https://www.openbanking.org.uk/regulated-providers/investec-bank-plc/
 - https://www.wealthbox.com/wp-json/wp/v2/integrations?per_page=100&page=1
@@ -34,38 +35,6 @@ edges:
     api_families: null
     detected_by: sweep-standard-registers.py
     detected: '2026-10-14'
-- partner_name: ISO 10383 (MIC)
-  partner: null
-  type: register
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
-  source: mic
-  category: registered trading venues and market segments
-  contract_reference:
-    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
-    spec_file: null
-    standard: ISO 10383
-    role: venue operator
-    matched_domain: investec.com
-    matched_by: domain:investec.com
-    categories:
-    - SINT
-    operating_mics:
-    - INVE
-    mics:
-    - mic: INVE
-      operating_mic: INVE
-      segment: OPRT
-      market: INVESTEC BANK PLC
-      category: SINT
-      legal_name: ''
-      country: GB
-    detected_by: sweep-capital-markets.py
-    detected: '2026-10-15'
-  detected_by: sweep-capital-markets.py
-  first_seen: '2026-10-15'
 - partner_name: SEC (investment adviser registration)
   partner: null
   partner_match: register
@@ -97,4 +66,36 @@ edges:
     detected: '2026-10-18'
   detected_by: sweep-asset-management.py
   first_seen: '2026-10-18'
+- partner_name: ISO 10383 (MIC)
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv
+  source: mic
+  category: registered trading venues and market segments
+  contract_reference:
+    register: ISO 10383 Market Identifier Codes (ISO 20022 registration authority)
+    spec_file: null
+    standard: ISO 10383
+    role: venue operator
+    matched_domain: investec.com
+    matched_by: domain:investec.com
+    categories:
+    - SINT
+    operating_mics:
+    - INVE
+    mics:
+    - mic: INVE
+      operating_mic: INVE
+      segment: OPRT
+      market: INVESTEC BANK PLC
+      category: SINT
+      legal_name: ''
+      country: GB
+    detected_by: sweep-capital-markets.py
+    detected: '2026-10-19'
+  detected_by: sweep-capital-markets.py
+  first_seen: '2026-10-19'
 templates: []
